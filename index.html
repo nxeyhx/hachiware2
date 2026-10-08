@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>하치와레랑 이야기하기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-dot dot1"></div><div class="bg-dot dot2"></div>
+<main class="app">
+  <header class="header">
+    <div class="title-wrap">
+      <span class="tiny-title">CHAT ROOM</span>
+      <h1>하치와레랑 이야기하기</h1>
+      <p>오늘도 하치와레에게 편하게 이야기해봐!</p>
+    </div>
+    <button id="resetBtn" class="reset">↻ 새로 시작</button>
+  </header>
+
+  <section class="stage">
+    <div class="character-area" id="characterArea">
+      <div class="cloud cloud1"></div><div class="cloud cloud2"></div>
+      <div class="character-ring">
+        <img src="hachiware.png" alt="하치와레" class="character">
+      </div>
+      <div class="character-label">하치와레</div>
+    </div>
+
+    <div class="speech-card">
+      <div class="speech-top"><span class="online-dot"></span><b>하치와레</b><span id="thinkingLabel">AI 준비 중</span></div>
+      <div id="heroSpeech" class="hero-speech">안녕! 오늘은 무슨 이야기 해볼까?</div>
+    </div>
+  </section>
+
+  <div id="aiPanel" class="ai-panel">
+      <div class="ai-panel-title">🧠 하치와레 AI</div>
+      <div id="aiStatus">AI를 준비하고 있어… 처음 한 번만 모델을 받아오면 돼!</div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div class="ai-panel-note">빠른 모델 + 실시간 답변 + 하치와레풍 말투로 설정했어.</div>
+    </div>
+    <section id="messages" class="messages"></section>
+
+  <section class="composer">
+    <div id="typing" class="typing hidden"><i></i><i></i><i></i><span>하치와레가 생각하고 있어...</span></div>
+    <div class="input-line">
+      <textarea id="input" rows="1" placeholder="하치와레에게 이야기해줘..."></textarea>
+      <button id="mic" class="mic" aria-label="음성 입력">🎙️</button>
+      <button id="send" class="send">보내기</button>
+    </div>
+    <div class="composer-foot">
+      <span id="micStatus">🎙️ 마이크로 말할 수도 있어</span>
+      <span>Enter 전송 · Shift+Enter 줄바꿈</span>
+    </div>
+  </section>
+
+  <footer>※ 하치와레 캐릭터 이미지는 사용자가 제공한 이미지를 사용합니다.</footer>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
